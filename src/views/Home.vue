@@ -9,6 +9,7 @@
       </div>
       <div class="text">
         <div class="t">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio error, fuga nisi nulla odit quasi quos recusandae sit ullam! Corporis deserunt earum officia possimus quos recusandae tempora. Adipisci asperiores aut autem consequatur, debitis error fuga illum impedit laboriosam magnam modi nisi officia placeat quasi, recusandae rem saepe similique, tempora vel voluptatum? Eius provident quia quisquam recusandae sit! Aliquid delectus earum in iure maxime nam neque recusandae sit sunt ut. Ab asperiores assumenda at consectetur deserunt dolores est, harum itaque laborum, molestias nemo, odit officia recusandae reiciendis tenetur voluptatem voluptates. A ab adipisci consectetur, cupiditate doloremque eos explicabo fuga inventore ipsam laudantium mollitia nesciunt provident quo sequi, tempora tempore, velit veniam voluptatem! Consequatur corporis dolorem ea eaque eius error ex excepturi fugit id minima mollitia, pariatur praesentium quis quisquam sapiente similique unde veniam voluptatum. A accusamus adipisci alias architecto aut beatae delectus deleniti distinctio dolorem earum eligendi eos eum fugiat illum in ipsam magnam modi necessitatibus nostrum nulla odio perspiciatis porro praesentium qui ratione, repudiandae sit soluta suscipit veniam voluptatum! Ab aliquid aperiam architecto cupiditate deleniti doloribus dolorum ducimus earum, enim, eos facilis magni modi natus numquam obcaecati optio perferendis quia, quos sapiente soluta temporibus tenetur ut veniam voluptas voluptate! Aut?
         </div>
       </div>
     </div>
@@ -61,10 +62,10 @@ export default {
   .about
     font-size: 1.4em
 
-//.text
-//  width: 100vw
-//  display: flex
-//  justify-content: center
-//  .t
-//    max-width: 400px
+.text
+  width: 100vw
+  display: flex
+  justify-content: center
+  .t
+    max-width: 400px
 </style>
