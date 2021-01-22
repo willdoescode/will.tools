@@ -1,6 +1,9 @@
 <template>
   <main>
     <div v-if="!onMobile">
+      <a target="_blank" href="https://github.com/willdoescode" class="gh">
+        <img @click="clicked" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Ficonsimple-logotypes%2F512%2Fgithub-512.png&f=1&nofb=1" alt="gh icon">
+      </a>
       <div class="desktop">
           <div class="name">
             <h1>William Lane</h1>
@@ -9,7 +12,36 @@
       </div>
       <div class="text">
         <div class="t">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio error, fuga nisi nulla odit quasi quos recusandae sit ullam! Corporis deserunt earum officia possimus quos recusandae tempora. Adipisci asperiores aut autem consequatur, debitis error fuga illum impedit laboriosam magnam modi nisi officia placeat quasi, recusandae rem saepe similique, tempora vel voluptatum? Eius provident quia quisquam recusandae sit! Aliquid delectus earum in iure maxime nam neque recusandae sit sunt ut. Ab asperiores assumenda at consectetur deserunt dolores est, harum itaque laborum, molestias nemo, odit officia recusandae reiciendis tenetur voluptatem voluptates. A ab adipisci consectetur, cupiditate doloremque eos explicabo fuga inventore ipsam laudantium mollitia nesciunt provident quo sequi, tempora tempore, velit veniam voluptatem! Consequatur corporis dolorem ea eaque eius error ex excepturi fugit id minima mollitia, pariatur praesentium quis quisquam sapiente similique unde veniam voluptatum. A accusamus adipisci alias architecto aut beatae delectus deleniti distinctio dolorem earum eligendi eos eum fugiat illum in ipsam magnam modi necessitatibus nostrum nulla odio perspiciatis porro praesentium qui ratione, repudiandae sit soluta suscipit veniam voluptatum! Ab aliquid aperiam architecto cupiditate deleniti doloribus dolorum ducimus earum, enim, eos facilis magni modi natus numquam obcaecati optio perferendis quia, quos sapiente soluta temporibus tenetur ut veniam voluptas voluptate! Aut?
+          <h1 class="projects-header">My projects</h1>
+          <div class="projects">
+              <ProjectCard
+                name="Natls"
+                description="The ls replacement you never knew you needed"
+                img_url="https://github.com/willdoescode/nat/raw/main/assets/natbanner.png"
+                project_link="https://github.com/willdoescode/nat"
+              />
+
+            <ProjectCard
+              name="Wills Auto Clicker"
+              description="The Fastest Java Autoclicker"
+              img_url="https://github.com/willdoescode/willsautoclick/raw/master/readmeicons/dontevenask.png?raw=true"
+              project_link="https://github.com/willdoescode/willsautoclick"
+            />
+
+            <ProjectCard
+              name="Link Shortener"
+              description="A fast link shortener"
+              img_url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmoorestown-mall.com%2Fnoimage.gif&f=1&nofb=1"
+              project_link="https://github.com/willdoescode/linkshortener"
+            />
+
+            <ProjectCard
+              name="Dotfiles"
+              description="All of my dotfiles"
+              img_url="https://github.com/willdoescode/dotfiles/raw/main/ss.png"
+              project_link="https://github.com/willdoescode/dotfiles"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -24,6 +56,7 @@
 
 <script>
 import GeneralAbout from "@/components/GeneralAbout";
+import ProjectCard from "@/components/ProjectCard";
 
 export default {
   name: 'Home',
@@ -33,7 +66,8 @@ export default {
     }
   },
   components: {
-    GeneralAbout
+    GeneralAbout,
+    ProjectCard
   },
   methods: {
     isMobile() {
@@ -44,10 +78,16 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.gh
+  position: absolute
+  top: 3vh
+  right: 3vw
+  img
+    width: 5vw
+
 .desktop
   height: 100vh
   position: relative
-  margin-bottom: 50vh
   width: 100vw
   display: flex
   flex-direction: column
@@ -68,4 +108,13 @@ export default {
   justify-content: center
   .t
     max-width: 400px
+
+.projects-header
+  font-size: 2em
+  text-align: center
+
+.projects
+  display: flex
+  flex-direction: column
+  align-items: center
 </style>

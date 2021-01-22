@@ -23,7 +23,7 @@ export default {
   methods: {
     handleScroll() {
       console.log(window.pageYOffset)
-      if (window.pageYOffset > window.innerHeight / 2) {
+      if (window.pageYOffset > window.innerHeight / 4) {
         document.body.style = 'background-color: #379683'
       } else {
         document.body.style = 'background-color: #5CDB95'
