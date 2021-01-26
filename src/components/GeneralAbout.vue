@@ -2,7 +2,7 @@
   <main>
     <div v-if="!isMobile">
       <div class="desktop">
-        <h2 class="about">Full Stack Developer</h2>
+        <h2 ref="about" class="about">Full Stack Developer</h2>
       </div>
     </div>
     <div v-else>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { TimelineLite } from 'gsap';
+
 export default {
   name: 'GeneralAbout',
   data() {
@@ -24,6 +26,11 @@ export default {
   },
   props: {
     isMobile: Boolean
+  },
+  mounted() {
+    const timeline = new TimelineLite();
+    const {about} = this.$refs;
+    timeline.fromTo(about, {opacity: 0, y: '100%'}, {x: '0', y: '0', opacity: 1, delay: 1, duration: 1})
   }
 }
 </script>

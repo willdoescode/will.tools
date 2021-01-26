@@ -6,7 +6,7 @@
       </a>
       <div class="desktop">
           <div class="name">
-            <h1>William Lane</h1>
+            <h1 ref="name">William Lane</h1>
             <GeneralAbout class="about" v-bind:is-mobile="onMobile" />
           </div>
       </div>
@@ -57,6 +57,7 @@
 <script>
 import GeneralAbout from "@/components/GeneralAbout";
 import ProjectCard from "@/components/ProjectCard";
+import { TimelineLite } from 'gsap';
 
 export default {
   name: 'Home',
@@ -73,6 +74,12 @@ export default {
     isMobile() {
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
+  },
+  mounted() {
+    const timeline = new TimelineLite();
+    const { name } = this.$refs
+
+    timeline.fromTo(name, {opacity: 0, y: '100%'}, {x: '0', y: '0', opacity: 1, delay: 1, duration: 1})
   }
 }
 </script>
